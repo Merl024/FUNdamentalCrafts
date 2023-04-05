@@ -15,7 +15,7 @@ ul{list-style-type: none;}
 .p14{padding: 14px;}
 .mb{margin-bottom: 50px;}
 .mr{margin-right: 2%;}
-h1, h2, p, .banner, h3{padding: 20px; }
+h1, h2, p, .banner, h3{padding: 15px; }
 h2, p, h3{text-align: center;}
 .parizq p, .parder p {text-align: justify;}
 .ml{margin-left: 20px;}
@@ -141,6 +141,7 @@ h1{
     li{padding:5px;margin:5px; font-size: var(--ft-mobile);}
     main, footer, header{display:flex;flex-direction: column;align-items: center;}
     h1{font-size:30px;}
+    .parizq p, .parder p{text-align: justify;}
     p{font-size:15px;}
     h2{font-size: 25px;}
     h1{font-size: 20px;}
