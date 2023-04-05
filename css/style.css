@@ -123,6 +123,7 @@ h1{
     h1{font-size: var(--ft-desktop) ;}
     li{padding: 20px; margin: 20px; font-size: 25px;}
     a:hover{font-size: 37px; background-color: var(--bg-hover); border-radius: 10px; transition: .5s; background-color: var(--bg-hover); font-size: var(--ft-desktop);}
+    a{font-size: var(--ft-desktop);}
     header, footer, ul{display: flex; flex-direction: row;}
 }
 
