@@ -1,0 +1,145 @@
+/*Esta divido en tres secciones: las cosas que considero generales, la media queris desktop y la media queris mobile. Evite usar bootstrap para practicar mas ademas de que se me dificulta, por ello no pude agregar el menu hamburguesa*/
+/* Dentro de las media queris intente dividirlo por paginas*/
+/* La unica pagino no responsive es creaciones, pues planeo en replantear la idea una vez ya logre manejar bootstrap*/
+
+/*COSAS GENERALES */       
+*{padding:0;margin:0;}
+a{text-decoration: none; color: rgb(96, 118, 112);}
+ul{list-style-type: none;}
+.bgprin{background-color: antiquewhite;}
+.img-fluid{width: 100%; height: auto;}
+.ig, .face{width: 10%; height: auto;} 
+.p20{padding: 20px;}
+.m20{margin: 20px;}
+.m14{margin: 14px;}
+.p14{padding: 14px;}
+.mb{margin-bottom: 50px;}
+h1, h2, p, .banner, h3{padding: 20px; }
+h2, p, h3{text-align: center;}
+.ml{margin-left: 20px;}
+footer{margin-top: 15px;}
+.card{border-radius: 20px; align-items: center; background-color: #5d9494; margin: 10px;}
+.datos{background-color: var(--bg-hover); border-radius: 50px;}
+h1{
+    font-family:'vogue';
+    color: #5d9494;
+}
+:root{
+    --bg-hover: rgba(160, 193, 173, 0.479);
+    --ft-desktop: 40px;
+    --ft-mobile: 18px;
+}
+
+/*Agregando fuentes*/
+@font-face {
+    font-family: "vogue";
+    src: url(../fonts/vogue.ttf);
+}
+@font-face {
+    font-family: 'marxiana';
+    src: url(../fonts/TT\ Marxiana\ Trial\ Antiqua.ttf);
+}
+@font-face {
+    font-family: 'flower';
+    src: url(../fonts/MADE\ Sunflower\ PERSONAL\ USE.otf);
+}
+.grid{font-family: 'marxiana';}
+
+/*DESKTOP*/
+@media (min-width:1024px){
+    .grid{
+        display:grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area:footer;}
+    /*FLEXBOX*/
+    header{display: flex; flex-direction: row; justify-content: space-between;}
+
+    /*GRID NOSOTROS*/
+    .gridNosotros{ 
+        display: grid;
+        grid-template-areas: 
+        "encabezadonoso encabezadonoso encabezdonoso"
+        "parizq banner parder"
+        "somos somos somos";
+        grid-template-columns: 33% 34% 33%;
+        grid-template-rows: auto auto auto;
+    }
+    .encabezadonoso{ grid-area: encabezadonoso;}
+    .parizq{grid-area: parizq;}
+    .parder{grid-area: parder;}
+    .somos{grid-area: somos;}
+    .banner{grid-area: banner;}
+
+    .rrss{ display: grid; 
+        grid-template-areas: 
+        "headrrss headrrss"
+        "ig face";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;}
+    .ig{grid-area: ig; padding: 10%;}
+    .face{grid-area: face ; padding: 10%;}
+    .headrrss{grid-area: headrrss;}
+
+    /*GRID SERVICIOS*/
+    .gridServicios{
+        display: grid; 
+        grid-template-areas: 
+        "encabezado encabezado encabezado"
+        "card1 card2 card3";
+        grid-template-columns: 33% 34% 33%;
+        grid-template-rows: auto auto;
+    }
+    .encabezadoser{grid-area: encabezado;}
+    .card1{grid:card1;}
+    .card2{grid:card2;}
+    .card3{grid:card3;}
+
+    /* GRID CONTACTO*/
+    .gridContacto{ display: grid;
+        grid-template-areas: 
+        "contacto contacto"
+        "ubicacion ubicacion"
+        "form datos"
+        ;
+        grid-template-columns: 50% 50%; 
+        grid-template-rows: auto auto auto ;}
+    .contacto{grid-area: contacto;}
+    .ubicacion{grid-area: ubicacion;}
+    .form {grid-area: form;}
+    .datos{grid-area: datos;}
+    .form form, .datos{display: flex; flex-direction: column; row-gap: 10px;}
+
+
+    .flexcard{display: flex; flex-direction: column;}
+    p, label{font-size: 20px;}
+    h1{font-size: var(--ft-desktop) ;}
+    li{padding: 20px; margin: 20px; font-size: 25px;}
+    a:hover{font-size: 37px; background-color: var(--bg-hover); border-radius: 10px; transition: .5s; background-color: var(--bg-hover); font-size: var(--ft-desktop);}
+    header, footer, ul{display: flex; flex-direction: row;}
+}
+
+/*MOBILE*/
+@media (max-width: 768px) {
+    /*SERVICIOS*/
+    .card{margin: 10px; display: flex; flex-direction: column; justify-content: center; row-gap: 10px; padding: 10px;}
+
+    /*CONTACTO*/
+    .gridContacto, .form{display: flex; flex-direction: column; justify-content: center;}
+
+    ul{display: flex;flex-direction: row; justify-content: center;padding-left:0; flex-wrap: wrap;}
+    li{padding:5px;margin:5px; font-size: var(--ft-mobile);}
+    main, footer, header{display:flex;flex-direction: column;align-items: center;}
+    h1{font-size:30px;}
+    p{font-size:15px;}
+    h2{font-size: 25px;}
+    h1{font-size: 20px;}
+    .logo{ height: auto;}
+}
